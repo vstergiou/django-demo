@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Items</title></head>
+<body>
+  <h1>Items</h1>
+  <a href="{% url 'item-create' %}">Add Item</a>
+  <ul>
+    {% for item in object_list %}
+      <li><strong>{{ item.name }}</strong> — {{ item.description }}</li>
+    {% empty %}
+      <li>No items yet.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
