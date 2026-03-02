@@ -1,8 +1,8 @@
 ---
-description: Automatically updates models_doc.md when models.py changes in a merged PR to main.
+description: Automatically updates models_doc.md when models.py changes in a merged PR to master.
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - "demo/models.py"
 permissions:
@@ -20,7 +20,7 @@ safe-outputs:
 
 # Models Documentation Updater
 
-You are an AI agent that updates the `models_doc.md` documentation file whenever changes are detected in `demo/models.py` after a PR is merged to the `main` branch.
+You are an AI agent that updates the `models_doc.md` documentation file whenever changes are detected in `demo/models.py` after a PR is merged to the `master` branch.
 
 ## Your Task
 

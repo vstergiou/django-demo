@@ -21,15 +21,15 @@
 #
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
-# Automatically updates models_doc.md when models.py changes in a merged PR to main.
+# Automatically updates models_doc.md when models.py changes in a merged PR to master.
 #
-# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"9ef7b8b35474237c0a020bfb0e69654dde4fe729f79e6ceb5f1ec164da5807af","compiler_version":"v0.51.6"}
+# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"bed8fc72a023d4bac2879707f3e966807cf8cec796926eb48dbe4c08a5c9301c","compiler_version":"v0.51.6"}
 
 name: "Models Documentation Updater"
 "on":
   push:
     branches:
-    - main
+    - master
     paths:
     - demo/models.py
 
@@ -830,7 +830,7 @@ jobs:
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         env:
           WORKFLOW_NAME: "Models Documentation Updater"
-          WORKFLOW_DESCRIPTION: "Automatically updates models_doc.md when models.py changes in a merged PR to main."
+          WORKFLOW_DESCRIPTION: "Automatically updates models_doc.md when models.py changes in a merged PR to master."
           HAS_PATCH: ${{ steps.collect_output.outputs.has_patch }}
         with:
           script: |
