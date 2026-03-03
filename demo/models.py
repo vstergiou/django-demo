@@ -24,3 +24,11 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    color = models.CharField(max_length=7, default="#000000", help_text="Hex color code, e.g. #ff0000")
+
+    def __str__(self):
+        return self.name
